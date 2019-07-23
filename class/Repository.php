@@ -11,7 +11,7 @@ class Repository{
 
     public static function connect(){
         try {
-            $pdo = new PDO("mysql:host=localhost;dbname=ei2_preparation;charset=UTF8", "root", "MDPbdd");
+            $pdo = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF8", "$dbuser", "$dbpass");
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return new self($pdo);
         } catch (PDOException $e) {
