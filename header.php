@@ -5,11 +5,9 @@ session_start();
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/functions.php';
 
-$base = new PDO('mysql:host=localhost;dbname=ei2_preparation', 'root', 'MDPbdd');
+$base = new PDO('mysql:host=$dbhost;dbname=$dbname', $dbuser, $dbpass);
 $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
-// $user = User::load(1, "email", "password", "michel", 0);
-// UserRepository::add($user);
 
 
 ?>
